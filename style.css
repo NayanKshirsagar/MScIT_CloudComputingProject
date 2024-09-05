@@ -1,71 +1,77 @@
-/* General Styles */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #333;
-  color: white;
-  padding: 10px 0;
-  text-align: center;
-}
-
-header .contact-info p {
   margin: 0;
+  box-sizing: border-box;
 }
 
-header .logo {
-  margin: 10px 0;
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-header nav ul {
-  list-style: none;
-  padding: 0;
-}
-
-header nav ul li {
-  display: inline;
-  margin: 0 15px;
-}
-
-header nav ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-main {
+.container {
   padding: 20px;
+  border: 2px solid #ccc;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
 }
 
-section {
-  margin-bottom: 20px;
+.heading {
+  color: #318C46;
 }
 
-h1, h2 {
-  color: #333;
-}
-
-button {
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-footer {
-  background-color: #333;
-  color: white;
+.headings-container {
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
+  color: #000;
+}
+
+.form-controls {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.image-generate-btn {
+  background-color: #318C46;
+  cursor: pointer;
+  color: #fff;
+}
+
+#imageContainerText {
+  color: #000;
+}
+
+.image-container {
+  margin: 50px 0;
+  display: none;
+  text-align: center;
+}
+
+.my-generated-image {
   width: 100%;
-  bottom: 0;
+  height: 350px;
+}
+
+@media screen and (min-width: 280px) and (max-width: 920px) {
+  .container {
+      width: 100%;
+  }
+
+  .my-generated-image {
+      width: 100%;
+      height: 300px;
+  }
 }
