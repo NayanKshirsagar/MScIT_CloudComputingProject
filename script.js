@@ -1,40 +1,21 @@
-let generateImageForm = 
-    document.getElementById('generate-image-form');
-let formInput = 
-    document.getElementById('input-value');
-let imageContainerText = 
-    document.getElementById('imageContainerText');
-let imageGenerated = 
-    document.getElementById('generated-image');
-let imageContainer = 
-    document.getElementById('images-visible');
+function percentage_1() {
 
-async function fetchImages(category) {
-    try {
-        let response = 
-        await fetch(`use a API`);
-        if (!response.ok) {
-            throw new Error('Unable to fetch the data');
-        }
-        imageContainerText.innerText = 
-        "Below is your generated Image:";
-        imageContainer.style.display = "block";
-        imageGenerated.src = response.url;
-        console.log(response.url);
-    }
-    catch (error) {
-        console.log(error);
-    }
+    // Method returns the element of percent id
+    let percent = document.getElementById("percent").value;
+    
+    // Method returns the element of num id
+    let num = document.getElementById("num").value;
+    document.getElementById("value1")
+        .value = (num / 100) * percent;
 }
 
-generateImageForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    let enteredText = formInput.value;
-    if (enteredText !== "") {
-        fetchImages(enteredText);
-    }
-    else {
-        imageContainerText.innerText = 
-            "Input field can not be empty!";
-    }
-})
+function percentage_2() {
+
+    // Method returns the element of num1 id
+    let num1 = document.getElementById("num1").value;
+    
+    // Method returns the elements of num2 id
+    let num2 = document.getElementById("num2").value;
+    document.getElementById("value2")
+            .value = (num1 * 100) / num2 + "%";
+}
